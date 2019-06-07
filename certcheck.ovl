@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueLookup id="certcheck" desiredValue="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PaeValueLookup.xsd">
     <Lookups>
-        <Range state="Ok" from="31" to="2000">Valid</Range>
+        <Range state="Error" from="-1" to="-1">Not valid</Range>
+        <Range state="Error" from="0" to="0">Expired</Range>
         <Range state="Error" from="1" to="15">Very soon expire</Range>
-        <SingleInt state="Error" value="-1">Not valid</SingleInt>
-        <SingleInt state="Error" value="0">Expired</SingleInt>
         <Range state="Warning" from="16" to="30">Expire soon</Range>
+        <Range state="Ok" from="31" to="2000">Valid</Range>
     </Lookups>
 </ValueLookup>
